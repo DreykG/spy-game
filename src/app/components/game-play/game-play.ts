@@ -28,7 +28,8 @@ export class GamePlay implements OnInit, OnDestroy {
     // Получаем время из конфигурации сервиса и переводим в секунды
     // (Добавим геттер getConfig в сервис или напрямую обратимся к private, если сделали public)
     // Для простоты предположим, что мы считываем базовое время
-    this.timeLeft = 5 * 60; // По умолчанию 5 минут, ниже сделаем точнее
+    const savedMinutes = this.gameService.timeLimit; 
+    this.timeLeft = (savedMinutes * 60);
   }
 
   startDiscussion() {

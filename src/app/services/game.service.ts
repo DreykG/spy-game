@@ -10,6 +10,7 @@ export class GameService {
   private secretWord: string = '';
   private config!: GameConfig;
   public currentPlayerIndex: number = 0;
+  public timeLimit: number = 5;
 
   constructor() {}
 

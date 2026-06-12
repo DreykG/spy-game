@@ -53,6 +53,7 @@ export class GameSetup {
     const newValue = this.timeLimit + delta;
     if (newValue >= 1 && newValue <= 15) {
       this.timeLimit = newValue;
+      this.gameService.timeLimit = newValue;
     }
   }
 
